@@ -6,10 +6,11 @@ var searchlistEL = $("#past-searches");
 var city = "";
 var fetchLocationUrl = "http://api.openweathermap.org/geo/1.0/direct?q=";
 var weatherurl = "http://api.openweathermap.org/data/2.5/";
+var date = dayjs().add(1, 'day').format("D MMM, YYYY");
 var currentWeather = {};
 var fiveDayForecast = {};
 
-
+console.log(date);
 formEl.submit(function(event){
     event.preventDefault();
 
@@ -53,6 +54,7 @@ function fetchWeather(lon,lat,type){
         console.log(response.list[i].wind.speed);
         console.log(response.list[i].main.humidity);
         console.log(response.list[i].weather[0].icon);
+        
     }
         
      }else{

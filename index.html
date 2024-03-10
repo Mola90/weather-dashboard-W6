@@ -3,12 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="./assets/reset.css"> -->
+    <link rel="stylesheet" href="./assets/style.css">
     <title>Document</title>
 </head>
 <body>
+    <div id="main">
     <header> 
         <h1>Weather Dashboard</h1>
     </header>
+    <div id="upper-body">
     <aside>
         <h2>Search For A City:</h2>
 
@@ -24,17 +28,31 @@
         </ul>
 
     </aside>
-    <div id="current-weather">
-
     </div>
-    <div id="five-day-forecast">
+    <div id="lower-body">
+      <div id="current-weather" >
+        current-weater
+        <h2 id="cityname"></h2>
+      </div>
 
+      <div id="five-day-forecast">
+        <h2 id="five-title">5 Five Day Weather Forecast</h2>
+        <div id="five-day-fore">
+        <div class="five-day"> </div>
+        <div class="five-day"> </div>
+        <div class="five-day"> </div>
+        <div class="five-day"> </div>
+        <div class="five-day"> </div> 
+      </div>      
+
+      </div>
     </div>
+</div>    
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
 integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U="
-rossorigin="anonymous"></script>    
+crossorigin="anonymous"></script>    
 <script src="./assets/script.js"></script>
 </body>
 </html>

@@ -1,0 +1,130 @@
+body{
+    background-color: aliceblue;
+}
+
+#main{
+    display: flex;
+    flex-wrap: wrap;
+    /* min-width: 100%; */
+    width: 100%;
+    justify-content: center;
+
+}
+
+header{
+    width: 100%;
+    height: fit-content;
+    padding: 9px;
+    margin: 3px;
+}
+
+h1 {
+    text-align: center;
+    width: 100%;
+}
+
+#upper-body{
+    width: 20%;
+    height: 100vh;
+    padding: 5px;
+
+}
+
+#lower-body{
+    width: 70%;
+    height: 100vh;
+    padding: 5px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+}
+
+#current-weather{
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    height: 55%;
+}
+
+#five-day-forecast{
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    height: 35%;
+}
+
+
+ul {
+    list-style-type: none; 
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    min-height: 50vh;
+    font-size: large;
+    
+}
+
+
+
+
+
+
+
+
+
+/* form{
+    
+} */
+input{
+    max-width: 100%;
+}
+
+#current-weather{
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    /* height: 75%; */
+    width: 100%;
+    margin: 3px;
+    padding: 5px;
+    text-align: center;
+    height: 40%;
+
+}
+
+#five-day-forecast{
+    width: 90%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 60%;
+
+
+    
+}
+
+#five-title{
+    width: 100%;
+    text-align: center;
+
+}
+
+
+#five-day-fore{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    height: 90%;
+}
+
+.five-day{
+    width: 16%;
+    height: 75%;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+}
