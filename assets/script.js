@@ -7,10 +7,10 @@ var city = "";
 var fetchLocationUrl = "http://api.openweathermap.org/geo/1.0/direct?q=";
 var weatherurl = "http://api.openweathermap.org/data/2.5/";
 var date = dayjs().add(1, 'day').format("D MMM, YYYY");
-var currentWeather = {};
-var fiveDayForecast = {};
+// var currentWeather = {};
+// var fiveDayForecast = {};
 
-console.log(date);
+// console.log(date);
 formEl.submit(function(event){
     event.preventDefault();
 
@@ -34,12 +34,46 @@ searchlistEL.append(listEl);
 
 }
 
+function printFiveDays(index,temp,speed,humidity,icon){
+
+    var temperture = $("<h4>");
+    var windSpeed = $("<h4>");
+    var currentHumidity = $("<h4>");
+    //var weatherIcon = $("<div>");
+
+    temperture.text("Temperture: " + temp);
+    windSpeed.text("Windspeed: " + speed);
+    currentHumidity.text("Humidity: " + humidity);
+    //weatherIcon.text(icon);
+
+    var currentweathertemp = $("<h2>");
+    currentweathertemp.text("Current Weather");
+
+
+    var iconUrl = "http://openweathermap.org/img/wn/" + icon + ".png"; 
+    var iconImg = $("<img>").attr("src", iconUrl);
+
+    if(index === 5){
+        $("#current-weather").empty().append(currentweathertemp,temperture,windSpeed,currentHumidity,iconImg);
+
+
+    }else{
+
+    $("#day" + index).empty().append(temperture,windSpeed,currentHumidity,iconImg);
+
+    // $("#day" + index).append(temperture, windSpeed, currentHumidity, iconImg);
+    }
+    
+
+    
+}
+
 function fetchWeather(lon,lat,type){
-    console.log(typeof lon);
+    // console.log(typeof lon);
 
     var longtitude = lon.toFixed(2);
     var latitude = lat.toFixed(2);
-    console.log(latitude);
+    // console.log(latitude);
 
     url = weatherurl + type + "?lat=" +latitude+ "&lon=" + longtitude + "&appid=3d6eceb6d20dd4f1064ba032496f9d24&units=metric";
     console.log(url);
@@ -54,7 +88,11 @@ function fetchWeather(lon,lat,type){
         console.log(response.list[i].wind.speed);
         console.log(response.list[i].main.humidity);
         console.log(response.list[i].weather[0].icon);
-        
+        console.log("this is i" + i);
+        printFiveDays(i,response.list[i].main.temp,response.list[i].wind.speed,response.list[i].main.humidity,response.list[i].weather[0].icon);
+
+        console.log(typeof response.list[i].wind.speed);
+        console.log("above is a type of");
     }
         
      }else{
@@ -62,6 +100,8 @@ function fetchWeather(lon,lat,type){
        console.log(response.wind.speed);
        console.log(response.main.humidity);
        console.log(response.weather[0].icon);
+
+       printFiveDays(5,response.main.temp,response.wind.speed,response.main.humidity,response.weather[0].icon);
 
 
      }
