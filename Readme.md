@@ -33,4 +33,4 @@ I hold a Full Stack Web Development Certificate from the University of Adelaide.
 ## Appearance
 
 The following image demonstrates the page's appearance
-![Screenshot of webpage](./Screen%20Capture%20008%20-%20Document%20-%20127.0.0.1.jpg)
+![Screenshot of webpage](./assets/Screen%20Capture%20008%20-%20Document%20-%20127.0.0.1.jpg)
