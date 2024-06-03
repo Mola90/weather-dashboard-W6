@@ -4,8 +4,8 @@ var formEl = $("#city-search-form");
 var searchlistEL = $("#past-searches");
 
 var city = "";
-var fetchLocationUrl = "http://api.openweathermap.org/geo/1.0/direct?q=";
-var weatherurl = "http://api.openweathermap.org/data/2.5/";
+var fetchLocationUrl = "https://api.openweathermap.org/geo/1.0/direct?q=";
+var weatherurl = "https://api.openweathermap.org/data/2.5/";
 var date = dayjs().add(1, 'day').format("D MMM, YYYY");
 // var currentWeather = {};
 // var fiveDayForecast = {};
@@ -50,7 +50,7 @@ function printFiveDays(index,temp,speed,humidity,icon){
     currentweathertemp.text("Current Weather");
 
 
-    var iconUrl = "http://openweathermap.org/img/wn/" + icon + ".png"; 
+    var iconUrl = "https://openweathermap.org/img/wn/" + icon + ".png"; 
     var iconImg = $("<img>").attr("src", iconUrl);
 
     if(index === 5){
