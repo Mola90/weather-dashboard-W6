@@ -8,7 +8,7 @@ var fetchLocationUrl = "https://api.openweathermap.org/geo/1.0/direct?q=";
 var weatherurl = "https://api.openweathermap.org/data/2.5/";
 var date = dayjs().add(1, 'day').format("D MMM, YYYY");
 // var currentWeather = {};
-// var fiveDayForecast = {};
+// var fiveDayForecast = {}d;
 
 // console.log(date);
 formEl.submit(function(event){
