@@ -29,6 +29,7 @@ I hold a Full Stack Web Development Certificate from the University of Adelaide.
   
 ## Link-to-Webpage
 - https://github.com/Mola90/weather-dashboard-W6
+link to website: https://mola90.github.io/weather-dashboard-W6/ 
 
 ## Appearance
 
